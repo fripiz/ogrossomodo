@@ -1,0 +1,73 @@
+import type { Metadata } from "next";
+import PageHeader from "@/components/PageHeader";
+import PhotoPlaceholder from "@/components/PhotoPlaceholder";
+
+export const metadata: Metadata = {
+  title: "Histoire",
+  description: "L'histoire de la guinguette Ogrossomodo, édition après édition.",
+};
+
+// TODO: remplacer par les vraies éditions (années, lieux, anecdotes)
+const editions = [
+  {
+    period: "Édition 1 — [année]",
+    place: "[Premier emplacement]",
+    text: "Texte à compléter : comment tout a commencé, le premier lieu, les premières soirées.",
+  },
+  {
+    period: "Édition 2 — [année]",
+    place: "[Deuxième emplacement]",
+    text: "Texte à compléter : le déménagement, ce qui a changé, les moments marquants.",
+  },
+  {
+    period: "Nouvelle édition — [année]",
+    place: "[Emplacement actuel]",
+    text: "Texte à compléter : le nouveau lieu, ce qui attend les visiteurs cette saison.",
+    current: true,
+  },
+];
+
+export default function HistoirePage() {
+  return (
+    <>
+      <PageHeader
+        title="Notre histoire"
+        intro="Une guinguette qui a changé de décor au fil des éditions, sans jamais perdre son esprit."
+      />
+
+      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+        <div className="prose-page">
+          <p>
+            <span className="placeholder">[Texte d&apos;introduction à compléter]</span>{" "}
+            Qui est derrière Ogrossomodo, pourquoi une guinguette, le lien avec La
+            Bièrataise…
+          </p>
+        </div>
+
+        <ol className="relative mt-12 space-y-12 border-l-2 border-brick/30 pl-8">
+          {editions.map((edition) => (
+            <li key={edition.period} className="relative">
+              <span
+                aria-hidden="true"
+                className={`absolute -left-[41px] top-1 h-4 w-4 rounded-full border-2 border-cream ${
+                  edition.current ? "bg-brick ring-4 ring-brick/20" : "bg-forest"
+                }`}
+              />
+              <p className="text-sm uppercase tracking-widest text-brick">
+                {edition.period}
+                {edition.current && (
+                  <span className="ml-2 rounded-full bg-mustard px-2 py-0.5 text-xs normal-case tracking-normal text-ink">
+                    En ce moment
+                  </span>
+                )}
+              </p>
+              <h2 className="mt-1 font-display text-2xl text-forest">{edition.place}</h2>
+              <p className="mt-3 leading-relaxed text-ink/80">{edition.text}</p>
+              <PhotoPlaceholder label={`Photo — ${edition.place}`} className="mt-5 aspect-[16/9]" />
+            </li>
+          ))}
+        </ol>
+      </div>
+    </>
+  );
+}

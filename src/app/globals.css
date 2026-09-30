@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* Palette provisoire, à affiner avec la vraie charte */
+@theme {
+  --color-cream: #fbf5ea;
+  --color-paper: #f4ead6;
+  --color-ink: #2a2622;
+  --color-forest: #2f4a3a;
+  --color-forest-dark: #22372b;
+  --color-brick: #b8472a;
+  --color-mustard: #e0a93b;
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-work-sans), system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+/* Liseré vichy façon nappe de guinguette */
+.gingham {
+  background-color: var(--color-cream);
+  background-image:
+    linear-gradient(90deg, rgb(184 71 42 / 0.45) 50%, transparent 50%),
+    linear-gradient(rgb(184 71 42 / 0.45) 50%, transparent 50%);
+  background-size: 16px 16px;
+}
+
+/* Mise en forme des pages de texte (histoire, pages légales) */
+.prose-page h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-forest);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.prose-page p,
+.prose-page ul {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+.prose-page ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.prose-page a {
+  color: var(--color-brick);
+  text-decoration: underline;
+}
+.prose-page .placeholder {
+  background: rgb(224 169 59 / 0.25);
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+}
