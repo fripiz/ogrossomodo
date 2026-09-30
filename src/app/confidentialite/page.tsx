@@ -1,81 +1,59 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LegalPage from "@/components/LegalPage";
-import { site } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Politique de confidentialité" };
 
 export default function ConfidentialitePage() {
   return (
-    <LegalPage title="Politique de confidentialité" updatedAt="[date]">
-      <p>
-        Cette politique explique quelles données personnelles {site.name} collecte sur
-        ce site, pourquoi, et quels sont vos droits, conformément au Règlement général
-        sur la protection des données (RGPD) et à la loi Informatique et Libertés.
-      </p>
-
+    <LegalPage title="Politique de confidentialité" updatedAt="30 septembre 2026" hasPlaceholders>
       <h2>Responsable du traitement</h2>
       <p>
-        <span className="placeholder">[nom de la structure]</span>,{" "}
-        <span className="placeholder">[adresse]</span>. Contact : {site.email}
+        OGROSSO (nom commercial Ogrossomodo), EURL, SIREN 914 889 738, siège social 6
+        Place des Halles, 31390 Carbonne, est responsable du traitement des données
+        collectées sur ce site.
       </p>
 
       <h2>Données collectées</h2>
-      <p>Via le formulaire de contact, nous collectons :</p>
+      <p>Ce site collecte des données personnelles uniquement via le formulaire de contact :</p>
       <ul>
-        <li>votre nom ;</li>
-        <li>votre adresse email ;</li>
-        <li>le contenu de votre message.</li>
+        <li>Nom</li>
+        <li>Adresse email</li>
+        <li>Contenu du message</li>
       </ul>
-      <p>Aucune autre donnée n&apos;est collectée à votre insu.</p>
 
-      <h2>Finalité et base légale</h2>
+      <h2>Finalité du traitement</h2>
       <p>
-        Ces données servent uniquement à répondre à votre demande. Le traitement repose
-        sur notre intérêt légitime à répondre aux messages qui nous sont adressés
-        (article 6.1.f du RGPD).
+        Ces données sont utilisées exclusivement pour répondre à votre demande de
+        contact. Elles ne sont ni revendues, ni partagées avec des tiers à des fins
+        commerciales.
       </p>
 
       <h2>Durée de conservation</h2>
       <p>
-        Les messages sont conservés <span className="placeholder">[durée, par ex. 3 ans]</span>{" "}
-        à compter du dernier échange, puis supprimés.
-      </p>
-
-      <h2>Destinataires</h2>
-      <p>
-        Vos données sont destinées exclusivement à l&apos;équipe de {site.name}. Elles ne
-        sont ni vendues ni cédées à des tiers. Elles peuvent être traitées par nos
-        prestataires techniques (hébergement :{" "}
-        Vercel Inc. ; envoi des emails : <span className="placeholder">[prestataire]</span>),
-        dans la limite nécessaire à leur mission.
-      </p>
-
-      <h2>Transferts hors de l&apos;Union européenne</h2>
-      <p>
-        Notre hébergeur est situé aux États-Unis. Ces transferts sont encadrés par{" "}
-        <span className="placeholder">
-          [le Data Privacy Framework UE–États-Unis et/ou les clauses contractuelles types de la Commission européenne]
-        </span>
-        .
+        Les données transmises via le formulaire de contact sont conservées pendant{" "}
+        <span className="placeholder">[à compléter]</span>.
       </p>
 
       <h2>Vos droits</h2>
       <p>
-        Vous disposez d&apos;un droit d&apos;accès, de rectification, d&apos;effacement,
-        de limitation, d&apos;opposition et de portabilité de vos données. Pour les
-        exercer, écrivez-nous à {site.email}.
+        Conformément au Règlement Général sur la Protection des Données (RGPD) et à la
+        loi Informatique et Libertés, vous disposez d&apos;un droit d&apos;accès, de
+        rectification, d&apos;effacement et de portabilité de vos données, ainsi que
+        d&apos;un droit d&apos;opposition au traitement. Vous pouvez exercer ces droits en
+        nous contactant à l&apos;adresse : <span className="placeholder">[à compléter]</span>.
       </p>
       <p>
-        Si vous estimez que vos droits ne sont pas respectés, vous pouvez adresser une
-        réclamation à la CNIL (
+        Vous disposez également du droit d&apos;introduire une réclamation auprès de la
+        Commission Nationale de l&apos;Informatique et des Libertés (CNIL) :{" "}
         <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">www.cnil.fr</a>
-        ).
       </p>
 
-      <h2>Cookies</h2>
+      <h2>Hébergement des données</h2>
       <p>
-        Voir notre <Link href="/cookies">politique de cookies</Link>.
+        Les données sont hébergées par Vercel Inc. (voir{" "}
+        <Link href="/mentions-legales">Mentions légales</Link> pour les coordonnées
+        complètes).
       </p>
     </LegalPage>
   );
