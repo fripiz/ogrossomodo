@@ -28,6 +28,18 @@ export default function ConfidentialitePage() {
         contact. Elles ne sont ni revendues, ni partagées avec des tiers à des fins
         commerciales.
       </p>
+      <p>
+        La base légale de ce traitement est l&apos;intérêt légitime de OGROSSO à répondre
+        aux demandes qui lui sont adressées (article 6.1.f du RGPD).
+      </p>
+
+      <h2>Transfert de données hors de l&apos;Union européenne</h2>
+      <p>
+        L&apos;hébergeur Vercel Inc. est une société américaine. Les données peuvent donc
+        être transférées vers les États-Unis. Ce transfert est encadré par le Data Privacy
+        Framework UE-États-Unis, mécanisme reconnu par la Commission européenne comme
+        garantissant un niveau de protection adéquat.
+      </p>
 
       <h2>Durée de conservation</h2>
       <p>
