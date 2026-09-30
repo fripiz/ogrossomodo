@@ -13,7 +13,7 @@ export default function BierataiseBanner() {
             Les bières servies à la guinguette sont brassées par La Bièrataise.
             Découvrez la brasserie, ses recettes et ses points de vente.
           </p>
-          <p className="mt-5 text-xs text-cream/70">
+          <p className="mt-5 text-sm text-cream/85">
             L&apos;abus d&apos;alcool est dangereux pour la santé, à consommer avec modération.
           </p>
         </div>
