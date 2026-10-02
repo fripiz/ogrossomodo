@@ -4,7 +4,8 @@ import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 
 export const metadata: Metadata = {
   title: "Histoire",
-  description: "L'histoire de la guinguette Ogrossomodo, édition après édition.",
+  description:
+    "L'histoire de la guinguette Ogrossomodo, édition après édition, jusqu'à son nouveau lieu à Bérat.",
 };
 
 // TODO: remplacer par les vraies éditions (années, lieux, anecdotes)

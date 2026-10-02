@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Écrire à la guinguette Ogrossomodo.",
+  description: "Contactez la guinguette Ogrossomodo à Bérat.",
 };
 
 export default function ContactPage() {
