@@ -4,7 +4,7 @@ import { legalNav, mainNav, site } from "@/lib/site";
 export default function Footer() {
   return (
     <footer className="bg-forest-dark text-cream/80">
-      <div className="gingham h-3" aria-hidden="true" />
+      <div className="h-10 bg-cream" aria-hidden="true" />
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 text-sm sm:grid-cols-3 sm:px-6">
         <div>
           <p className="font-display text-xl text-cream">{site.name}</p>
