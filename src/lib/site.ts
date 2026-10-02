@@ -2,7 +2,7 @@ export const site = {
   name: "Ogrossomodo",
   tagline: "Guinguette",
   description:
-    "Ogrossomodo, la guinguette : musique, bière artisanale et longues soirées au bord de l'eau.",
+    "Ogrossomodo, guinguette à Bérat — musique, bonne humeur et bières de La Bièrataise. Nouvelle édition, nouveau lieu.",
   bierataiseUrl: "https://bierataise.com",
   // TODO: remplacer par les vraies coordonnées
   email: "contact@ogrossomodo.fr",
