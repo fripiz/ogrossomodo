@@ -70,3 +70,9 @@ mark.placeholder {
   border: 3px solid var(--color-cream);
   box-shadow: 0 0 0 2px var(--color-brick), 0 4px 10px rgb(0 0 0 / 0.3);
 }
+
+/* Le site n'a qu'un thème clair : on demande aux navigateurs qui forcent le
+   mode sombre (Opera GX, Chrome « Auto Dark ») de ne pas l'assombrir. */
+:root {
+  color-scheme: only light;
+}
