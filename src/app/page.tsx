@@ -2,6 +2,7 @@ import Link from "next/link";
 import Garland from "@/components/Garland";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import EventList from "@/components/EventList";
+import VenueSection from "@/components/VenueSection";
 import { getPracticalInfo, getUpcomingEvents } from "@/lib/fidelityapp";
 import { hasHours, openingHoursSpecification } from "@/lib/hours";
 import { site } from "@/lib/site";
@@ -27,6 +28,7 @@ export default async function Home() {
       description: site.description,
       url: site.url,
       address,
+      geo: { "@type": "GeoCoordinates", latitude: site.position.lat, longitude: site.position.lng },
       ...(info?.phone ? { telephone: info.phone } : {}),
       ...(hasHours(info) ? { openingHoursSpecification: openingHoursSpecification(info) } : {}),
     },
@@ -105,6 +107,8 @@ export default async function Home() {
           )}
         </div>
       </section>
+
+      <VenueSection info={info} />
 
       <DraftOnly>
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">

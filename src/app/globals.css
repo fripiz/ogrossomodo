@@ -62,3 +62,11 @@ mark.placeholder {
   padding: 0 0.25rem;
   border-radius: 0.25rem;
 }
+
+/* Marqueur de la carte (accueil) */
+.venue-marker {
+  border-radius: 9999px;
+  background: var(--color-brick);
+  border: 3px solid var(--color-cream);
+  box-shadow: 0 0 0 2px var(--color-brick), 0 4px 10px rgb(0 0 0 / 0.3);
+}

@@ -67,6 +67,15 @@ export default function ConfidentialitePage() {
         <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">www.cnil.fr</a>
       </p>
 
+      <h2>Carte</h2>
+      <p>
+        La carte de la page d&apos;accueil est affichée avec les fonds de carte
+        d&apos;OpenStreetMap : à son chargement, votre adresse IP est transmise aux serveurs
+        de la Fondation OpenStreetMap, comme pour tout site affichant ces cartes. Aucun
+        cookie n&apos;est déposé. Les boutons d&apos;itinéraire ouvrent Google Maps, Waze ou
+        Plans, soumis à leurs propres politiques de confidentialité.
+      </p>
+
       <h2>Hébergement des données</h2>
       <p>
         Les données sont hébergées par Vercel Inc. (voir{" "}
