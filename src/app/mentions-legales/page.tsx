@@ -31,8 +31,8 @@ export default function MentionsLegalesPage() {
       <h2>Hébergement</h2>
       <p>Le site est hébergé par :</p>
       <p>
-        Vercel Inc., société de droit américain, 340 S Lemon Ave #4133, Walnut, CA 91789,
-        États-Unis. <ToConfirm>[Téléphone de Vercel à compléter]</ToConfirm> Site web :{" "}
+        Vercel Inc., société de droit américain, 440 N Barranca Ave #4133, Covina, CA 91723,
+        États-Unis. Téléphone : +1 951 383 6898 <ToConfirm /> Site web :{" "}
         <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel.com</a>
       </p>
 
