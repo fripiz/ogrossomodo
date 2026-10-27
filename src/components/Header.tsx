@@ -33,7 +33,7 @@ export default function Header() {
 
         <nav
           id="main-nav"
-          className={`${open ? "flex" : "hidden"} absolute left-0 right-0 top-full flex-col gap-1 border-b border-forest/10 bg-cream px-4 pb-4 sm:static sm:flex sm:flex-row sm:gap-8 sm:border-0 sm:p-0`}
+          className={`${open ? "flex" : "hidden"} absolute left-0 right-0 top-full flex-col divide-y divide-forest/10 border-y-2 border-forest/25 bg-paper px-4 pb-4 pt-2 shadow-[0_12px_24px_-8px_rgba(34,55,43,0.35)] sm:static sm:flex sm:flex-row sm:gap-8 sm:divide-y-0 sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none`}
         >
           {mainNav.map((item) => {
             const active = pathname === item.href;
