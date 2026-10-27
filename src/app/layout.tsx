@@ -10,6 +10,8 @@ import "./globals.css";
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
+  // Italique pour le logo (macaron) et le nom dans le header
+  style: ["normal", "italic"],
 });
 
 const workSans = Work_Sans({
@@ -19,8 +21,8 @@ const workSans = Work_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} — guinguette à Bérat`,
-    template: `%s — ${site.name}`,
+    default: `${site.name} · Guinguette à Bérat, concerts et bières locales`,
+    template: `%s · ${site.name}`,
   },
   description: site.description,
   metadataBase: new URL(site.url),
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     siteName: site.name,
-    title: `${site.name} — guinguette à Bérat`,
+    title: `${site.name} · Guinguette à Bérat, concerts et bières locales`,
     description: site.description,
   },
   // Indexation en production uniquement (pas les previews Vercel)

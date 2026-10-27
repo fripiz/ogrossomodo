@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
 
-export const metadata: Metadata = { title: "Politique de cookies" };
+export const metadata: Metadata = {
+  title: "Politique de cookies",
+  description:
+    "Les cookies utilisés sur ogrossomodo.com, leur durée et la façon de les gérer ou de les refuser depuis votre navigateur.",
+  alternates: { canonical: "/cookies" },
+};
 
 export default function CookiesPage() {
   return (

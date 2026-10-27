@@ -3,7 +3,12 @@ import LegalPage from "@/components/LegalPage";
 import Link from "next/link";
 import { ToConfirm } from "@/components/Draft";
 
-export const metadata: Metadata = { title: "Mentions légales" };
+export const metadata: Metadata = {
+  title: "Mentions légales",
+  description:
+    "Mentions légales du site ogrossomodo.com : éditeur, directeur de la publication, hébergeur et propriété des contenus.",
+  alternates: { canonical: "/mentions-legales" },
+};
 
 export default function MentionsLegalesPage() {
   return (

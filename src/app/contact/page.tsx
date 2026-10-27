@@ -5,8 +5,9 @@ import ContactForm from "./ContactForm";
 import { getPracticalInfo } from "@/lib/fidelityapp";
 
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Contactez la guinguette Ogrossomodo à Bérat : questions, réservations, privatisations, artistes.",
+  title: "Contact, réservations et privatisations",
+  description:
+    "Contactez la guinguette Ogrossomodo à Bérat : questions, réservations, privatisations ou proposition d'artistes pour nos soirées.",
   alternates: { canonical: "/contact" },
 };
 

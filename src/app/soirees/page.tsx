@@ -5,7 +5,7 @@ import EventList from "@/components/EventList";
 import { getUpcomingEvents } from "@/lib/fidelityapp";
 
 export const metadata: Metadata = {
-  title: "Soirées et concerts",
+  title: "Soirées et concerts à Bérat",
   description:
     "Les prochaines soirées de la guinguette Ogrossomodo à Bérat : concerts, bals et événements, avec les bières de La Bièrataise.",
   alternates: { canonical: "/soirees" },

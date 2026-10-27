@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import LegalPage from "@/components/LegalPage";
 
-export const metadata: Metadata = { title: "Politique de confidentialité" };
+export const metadata: Metadata = {
+  title: "Politique de confidentialité",
+  description:
+    "Comment la guinguette Ogrossomodo traite vos données personnelles : formulaire de contact, durées de conservation et exercice de vos droits.",
+  alternates: { canonical: "/confidentialite" },
+};
 
 export default function ConfidentialitePage() {
   return (

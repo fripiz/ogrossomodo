@@ -2,7 +2,7 @@ export const site = {
   name: "Ogrossomodo",
   tagline: "Guinguette",
   description:
-    "Ogrossomodo, guinguette à Bérat — musique, bonne humeur et bières de La Bièrataise. Nouvelle édition, nouveau lieu.",
+    "Guinguette à Bérat, à la brasserie La Bièrataise : soirées, concerts et bières artisanales brassées sur place. Programme, horaires et accès.",
   bierataiseUrl: "https://bierataise.com",
   url: "https://ogrossomodo.com",
   // Coordonnées : saisies par la guinguette dans FidélityApp (Infos pratiques).

@@ -4,9 +4,10 @@ import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import { DraftOnly, PublicOnly, ToConfirm } from "@/components/Draft";
 
 export const metadata: Metadata = {
-  title: "Histoire",
+  title: "Notre histoire",
   description:
-    "L'histoire de la guinguette Ogrossomodo, édition après édition, jusqu'à son nouveau lieu à Bérat.",
+    "L'histoire de la guinguette Ogrossomodo, édition après édition, jusqu'à son nouveau lieu à Bérat, à la brasserie La Bièrataise.",
+  alternates: { canonical: "/histoire" },
 };
 
 // TODO: remplacer par les vraies éditions (années, lieux, anecdotes)
