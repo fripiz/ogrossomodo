@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
+import Link from "next/link";
+import { ToConfirm } from "@/components/Draft";
 
 export const metadata: Metadata = { title: "Mentions légales" };
 
@@ -21,15 +23,16 @@ export default function MentionsLegalesPage() {
         <li>TVA intracommunautaire : FR03914889738</li>
         <li>Siège social : 6 Place des Halles, 31390 Carbonne</li>
         <li>Directeur de la publication : Romain Rosso, gérant</li>
-        <li>Email : <span className="placeholder">[à compléter]</span></li>
-        <li>Téléphone : <span className="placeholder">[à compléter]</span></li>
+        <li>
+          Contact : <ToConfirm fallback={<Link href="/contact">formulaire de contact</Link>}>[email et téléphone à compléter]</ToConfirm>
+        </li>
       </ul>
 
       <h2>Hébergement</h2>
       <p>Le site est hébergé par :</p>
       <p>
         Vercel Inc., société de droit américain, 340 S Lemon Ave #4133, Walnut, CA 91789,
-        États-Unis. Site web :{" "}
+        États-Unis. <ToConfirm>[Téléphone de Vercel à compléter]</ToConfirm> Site web :{" "}
         <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel.com</a>
       </p>
 

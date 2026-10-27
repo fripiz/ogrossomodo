@@ -4,13 +4,15 @@ export const site = {
   description:
     "Ogrossomodo, guinguette à Bérat — musique, bonne humeur et bières de La Bièrataise. Nouvelle édition, nouveau lieu.",
   bierataiseUrl: "https://bierataise.com",
-  // TODO: remplacer par les vraies coordonnées
-  email: "contact@ogrossomodo.fr",
-  address: "Adresse à compléter",
+  url: "https://ogrossomodo.com",
+  // Coordonnées : saisies par la guinguette dans FidélityApp (Infos pratiques).
+  // Aucune valeur inventée ici : vide = rien n'est affiché en production.
+  city: "Bérat",
 };
 
 export const mainNav = [
   { href: "/", label: "Accueil" },
+  { href: "/soirees", label: "Soirées" },
   { href: "/histoire", label: "Histoire" },
   { href: "/contact", label: "Contact" },
 ];

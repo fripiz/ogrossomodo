@@ -45,3 +45,20 @@ body {
   padding: 0 0.25rem;
   border-radius: 0.25rem;
 }
+
+/* Nappe vichy : décor en attendant les vraies photos */
+.gingham {
+  background-color: var(--color-cream);
+  background-image:
+    linear-gradient(90deg, rgb(184 71 42 / 0.35) 50%, transparent 50%),
+    linear-gradient(rgb(184 71 42 / 0.35) 50%, transparent 50%);
+  background-size: 36px 36px;
+}
+
+/* Passages à compléter (mode brouillon uniquement) */
+mark.placeholder {
+  background: rgb(224 169 59 / 0.35);
+  color: inherit;
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+}

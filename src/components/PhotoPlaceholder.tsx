@@ -1,10 +1,17 @@
+import { SHOW_DRAFT } from "@/lib/draft";
+
 type Props = {
   label: string;
   className?: string;
 };
 
-// Emplacement photo provisoire : à remplacer par <Image> de next/image
+// Emplacement photo provisoire : à remplacer par <Image> de next/image.
+// En brouillon : cadre pointillé avec le nom de la photo attendue.
+// En production : motif vichy décoratif (aucun texte « photo à venir » en public).
 export default function PhotoPlaceholder({ label, className = "" }: Props) {
+  if (!SHOW_DRAFT) {
+    return <div aria-hidden="true" className={`gingham rounded-2xl ${className}`} />;
+  }
   return (
     <div
       role="img"

@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
+import PracticalInfoBlock from "@/components/PracticalInfoBlock";
 import ContactForm from "./ContactForm";
-import { site } from "@/lib/site";
+import { getPracticalInfo } from "@/lib/fidelityapp";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contactez la guinguette Ogrossomodo à Bérat.",
+  description: "Contactez la guinguette Ogrossomodo à Bérat : questions, réservations, privatisations, artistes.",
+  alternates: { canonical: "/contact" },
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const info = await getPracticalInfo();
   return (
     <>
       <PageHeader
@@ -17,17 +20,8 @@ export default function ContactPage() {
       />
       <div className="mx-auto grid max-w-5xl gap-12 px-4 py-12 sm:px-6 md:grid-cols-[2fr_1fr]">
         <ContactForm />
-        <aside className="space-y-6 text-ink/80">
-          <div>
-            <h2 className="font-display text-xl text-forest">Nous trouver</h2>
-            <p className="mt-2">{site.address}</p>
-          </div>
-          <div>
-            <h2 className="font-display text-xl text-forest">Par email</h2>
-            <a href={`mailto:${site.email}`} className="mt-2 inline-block text-brick underline">
-              {site.email}
-            </a>
-          </div>
+        <aside className="text-ink/80">
+          <PracticalInfoBlock info={info} />
         </aside>
       </div>
     </>

@@ -1,4 +1,5 @@
 import PageHeader from "@/components/PageHeader";
+import { SHOW_DRAFT } from "@/lib/draft";
 
 type Props = {
   title: string;
@@ -13,7 +14,7 @@ export default function LegalPage({ title, updatedAt, hasPlaceholders = false, c
     <>
       <PageHeader title={title} />
       <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-        {hasPlaceholders && (
+        {hasPlaceholders && SHOW_DRAFT && (
           <p className="mb-8 rounded-lg border border-mustard/50 bg-mustard/10 px-4 py-3 text-sm">
             Les passages <span className="rounded bg-mustard/25 px-1">surlignés</span> sont
             à compléter.

@@ -19,8 +19,14 @@ export default function ConfidentialitePage() {
       <ul>
         <li>Nom</li>
         <li>Adresse email</li>
+        <li>Téléphone (facultatif)</li>
         <li>Contenu du message</li>
       </ul>
+      <p>
+        Les messages sont transmis à l&apos;équipe d&apos;Ogrossomodo via FidélityApp (Jules
+        Pigner), l&apos;outil de gestion de la guinguette, avec ses prestataires Supabase
+        (base de données) et Resend (envoi des e-mails).
+      </p>
 
       <h2>Finalité du traitement</h2>
       <p>
@@ -43,8 +49,8 @@ export default function ConfidentialitePage() {
 
       <h2>Durée de conservation</h2>
       <p>
-        Les données transmises via le formulaire de contact sont conservées pendant{" "}
-        <span className="placeholder">[à compléter]</span>.
+        Les données transmises via le formulaire de contact sont conservées pendant 3 ans
+        à compter du dernier échange, puis supprimées.
       </p>
 
       <h2>Vos droits</h2>
@@ -53,7 +59,7 @@ export default function ConfidentialitePage() {
         loi Informatique et Libertés, vous disposez d&apos;un droit d&apos;accès, de
         rectification, d&apos;effacement et de portabilité de vos données, ainsi que
         d&apos;un droit d&apos;opposition au traitement. Vous pouvez exercer ces droits en
-        nous contactant à l&apos;adresse : <span className="placeholder">[à compléter]</span>.
+        nous écrivant via le <Link href="/contact">formulaire de contact</Link>.
       </p>
       <p>
         Vous disposez également du droit d&apos;introduire une réclamation auprès de la

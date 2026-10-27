@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
+import { DraftOnly, PublicOnly, ToConfirm } from "@/components/Draft";
 
 export const metadata: Metadata = {
   title: "Histoire",
@@ -38,13 +39,24 @@ export default function HistoirePage() {
 
       <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
         <div className="prose-page">
-          <p>
-            <span className="placeholder">[Texte d&apos;introduction à compléter]</span>{" "}
-            Qui est derrière Ogrossomodo, pourquoi une guinguette, le lien avec La
-            Bièrataise…
-          </p>
+          <DraftOnly>
+            <p>
+              <ToConfirm>[Texte d&apos;introduction à compléter]</ToConfirm>{" "}
+              Qui est derrière Ogrossomodo, pourquoi une guinguette, le lien avec La
+              Bièrataise…
+            </p>
+          </DraftOnly>
+          <PublicOnly>
+            <p>
+              Ogrossomodo, c&apos;est une guinguette née de l&apos;envie de se retrouver autour
+              d&apos;une table, d&apos;un verre et de la musique. Elle a connu plusieurs décors au
+              fil des éditions et pose aujourd&apos;hui ses guirlandes à Bérat, aux côtés de la
+              brasserie La Bièrataise.
+            </p>
+          </PublicOnly>
         </div>
 
+        <DraftOnly>
         <ol className="relative mt-12 space-y-12 border-l-2 border-brick/30 pl-8">
           {editions.map((edition) => (
             <li key={edition.period} className="relative">
@@ -68,6 +80,7 @@ export default function HistoirePage() {
             </li>
           ))}
         </ol>
+        </DraftOnly>
       </div>
     </>
   );
