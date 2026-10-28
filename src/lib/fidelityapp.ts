@@ -81,3 +81,22 @@ export function eventTime(value: string): string | null {
     .format(date)
     .replace(":", " h ");
 }
+
+// Carte (bloc « menu ») : catégories dans l'ordre du dashboard et formules.
+export type MenuItem = { id: string; name: string; description: string | null; price: number | null };
+export type MenuCategory = { name: string; items: MenuItem[] };
+export type FixedMenu = MenuItem & { starter: string | null; mainCourse: string | null; dessert: string | null };
+export type Menu = { categories: MenuCategory[]; fixedMenus: FixedMenu[] };
+
+export async function getMenu(): Promise<Menu> {
+  const json = await get<Partial<Menu>>("menu");
+  return {
+    categories: Array.isArray(json?.categories) ? json.categories : [],
+    fixedMenus: Array.isArray(json?.fixedMenus) ? json.fixedMenus : [],
+  };
+}
+
+const priceFormat = new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" });
+export function formatPrice(value: number): string {
+  return priceFormat.format(value);
+}

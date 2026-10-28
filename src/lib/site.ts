@@ -11,6 +11,10 @@ export const site = {
   // Position GPS de la guinguette (même lieu que la brasserie La Bièrataise,
   // 848 route de Poucharramet) : carte et boutons d'itinéraire de l'accueil.
   position: { lat: 43.393304, lng: 1.171074 },
+  // Coordonnées légales confirmées par la guinguette le 28 octobre 2026
+  // (l'affichage public des horaires et du téléphone reste géré dans FidélityApp).
+  legalEmail: "ogrossomodo@gmail.com",
+  legalPhone: "06 87 17 59 62",
 };
 
 // Liens d'itinéraire (ouvrent l'application GPS du téléphone).
@@ -26,6 +30,7 @@ export function directions(): { label: string; href: string }[] {
 export const mainNav = [
   { href: "/", label: "Accueil" },
   { href: "/soirees", label: "Soirées" },
+  { href: "/carte", label: "La carte" },
   { href: "/histoire", label: "Histoire" },
   { href: "/contact", label: "Contact" },
 ];

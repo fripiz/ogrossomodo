@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { site } from "@/lib/site";
 import LegalPage from "@/components/LegalPage";
 
 export const metadata: Metadata = {
@@ -64,7 +65,7 @@ export default function ConfidentialitePage() {
         loi Informatique et Libertés, vous disposez d&apos;un droit d&apos;accès, de
         rectification, d&apos;effacement et de portabilité de vos données, ainsi que
         d&apos;un droit d&apos;opposition au traitement. Vous pouvez exercer ces droits en
-        nous écrivant via le <Link href="/contact">formulaire de contact</Link>.
+        nous écrivant à {site.legalEmail} ou via le <Link href="/contact">formulaire de contact</Link>.
       </p>
       <p>
         Vous disposez également du droit d&apos;introduire une réclamation auprès de la

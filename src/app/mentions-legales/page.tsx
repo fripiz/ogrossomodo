@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { site } from "@/lib/site";
 import LegalPage from "@/components/LegalPage";
-import Link from "next/link";
 import { ToConfirm } from "@/components/Draft";
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function MentionsLegalesPage() {
         <li>Siège social : 6 Place des Halles, 31390 Carbonne</li>
         <li>Directeur de la publication : Romain Rosso, gérant</li>
         <li>
-          Contact : <ToConfirm fallback={<Link href="/contact">formulaire de contact</Link>}>[email et téléphone à compléter]</ToConfirm>
+          Contact : {site.legalEmail} · {site.legalPhone}
         </li>
       </ul>
 
